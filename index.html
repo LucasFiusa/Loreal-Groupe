@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="website icon" type="png" href="image/logo_aba.webp">
     <title>L'Oréal Groupe</title>
 </head>
 <body>
     <header id="header">
         <div id="container">
-            <div id="abrir_menu_lateral_icon">
-                <i class="fa-solid fa-bars"></i>
-            </div> <!--abir_menu_lateral_icon-->
+            <button id="abrir_menu_lateral_icon" onclick="animar()">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+            </button> <!--abir_menu_lateral_icon-->
 
             <div id="menu_lateral">
-                <div id="fechar_menu_lateral_icon">
-                    <i class="fa-solid fa-x"></i>
-                </div> <!--fechar_menu_lateral_icon-->
                 <nav id="navbar">
                     <ul id="navbar_list">
                         <li><a href="#home">Início</a></li>
-                        <li><a href="#menu">Produtos</a></li>
                         <li><a href="#about">Sobre</a></li>
                         <li><a href="#process">Trajetória</a></li>
+                        <li><a href="#menu">Produtos</a></li>
                         <li><a href="#testimonials">Avaliações</a></li>
                     </ul>
 
@@ -39,22 +38,89 @@
 
             <div>
                 <!--  -->
-            </div>
+            </div> <!--nada-->
         </div>
     </header>
 
     <main>
         <section id="home">
             <div id="banner">
+                <div id="content">
+                    <div id="cta">
+                        <h1 id="home_title">Beleza que transforma vidas!</h1>
+                        
+                        <div id="content_default">
+                            <a href="https://www.loreal.com/en/" class="btn-default">Saiba mais</a>
+                        </div><!--content-default-->
+                    </div><!--cta-->
+                </div> <!--content-->
+            </div> <!--banner-->
+        </section>
 
-                
-                <h1 id="home_title">Essentiality of beauty</h1>
-            
-            
+        <section id="about">
+            <div class="interface">
+                <div id="about_container" class="flex">
+                    <div id="headline">
+                        <h2 class="title-section">Sobre</h2>
+                        <h3 class="subtitle-section">Our beautiful stories</h3>
+                        <p id="headline_description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ut assumenda repellendus atque tempore doloremque ab dolorum eveniet beatae delectus facilis rerum recusandae in inventore ipsum culpa, velit, obcaecati a.
+                        </p>
+                    </div><!--headline-->
+                    <div id="headline_img">
+                        <!-- <img src="image/about_image.webp" alt=""> -->
+                    </div><!--headline_img-->
+                </div><!--flex-->
+            </div><!--interface-->
+        </section>
+
+        <section id="process">
+            <div class="interface">
+                <div class="titles">
+                    <h2 class="subtitle-section">Trajetória</h2>
+                    <h3 class="title-section">Uma Jornada de Sucesso na Beleza Desde 1909</h3>
+                </div>
+                <div id="tempo_flex">
+                    <div id="content_tempo">
+                        <!-- <img src="image/linha_do_tempo.png" alt="Imagem de linha do tempo da L'Oréal Groupe" id="linha_tempo"> -->
+                        <div id="linha_horizontal"></div>
+                        <div id="content_vertical">
+                            <div class="linha-vertical"></div>
+                            <div class="linha-vertical"></div>
+                            <div class="linha-vertical"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex" id="descriptions_container">
+                    <div class="flex-descriptions">
+                        <h4>1909</h4>
+
+                        <p class="descriptions-process">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus molestias amet aperiam corporis, nemo iusto eius sit.
+                        </p>
+                    </div>
+
+                    <div class="flex-descriptions">
+                        <h4>1909</h4>
+
+                        <p class="descriptions-process">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus molestias amet aperiam corporis, nemo iusto eius sit.
+                        </p>
+                    </div>
+
+                    <div class="flex-descriptions">
+                        <h4>2024</h4>
+
+                        <p class="descriptions-process">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus molestias amet aperiam corporis, nemo iusto eius sit.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <script type="module" src="script.js"></script>
+    <script src="script.js">
+    </script>
 </body>
 </html>

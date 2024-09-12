@@ -28,3 +28,8 @@ function updateImage() {
 window.addEventListener('scroll', updateImage);
 header.addEventListener('mouseover', updateImage);
 header.addEventListener('mouseout', updateImage)
+
+function animar(){
+    const menu = document.getElementById('abrir_menu_lateral_icon')
+    menu.classList.toggle('ativar')
+}
