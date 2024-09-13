@@ -38,8 +38,10 @@ a {
 }
 
 .titles {
-  text-align: center;
-  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 40%;
 }
 
 .title-section {
@@ -89,7 +91,7 @@ header.rolagem .linha {
   background-color: #3d3d3d;
 }
 
-button {
+header button {
   width: 35px;
   height: 35px;
   background-color: transparent;
@@ -175,7 +177,7 @@ button .linha {
 }
 
 #about {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #about_container {
@@ -187,6 +189,7 @@ button .linha {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-height: 400px;
 }
 
 #headline_img {
@@ -198,48 +201,221 @@ button .linha {
   box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.2);
 }
 
-#tempo_flex {
+#process {
+  min-height: 100vh;
+}
+
+#process .interface {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+#flex_process {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-#content_tempo {
-  width: 78%;
-  display: flex;
-  flex-direction: column;
-}
-
-#linha_horizontal {
+#process .titles {
+  text-align: center;
   width: 100%;
-  height: 3px;
-  background-color: #3d3d3d;
 }
 
-#content_vertical {
+#dishes_flex {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dishes {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
 }
 
-.linha-vertical {
-  width: 2px;
-  height: 150px;
-  background-color: #3d3d3d;
-}
-
-#descriptions_container {
-  justify-content: space-between;
-}
-
-.flex-descriptions {
+.dish {
+  width: 23%;
+  background-color: #fffefe;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   display: flex;
   flex-direction: column;
-}
-.flex-descriptions h4 {
+  gap: 15px;
   text-align: center;
 }
 
-.descriptions-process {
-  width: 250px;
-  text-align: justify;
+.descriptions-dishes {
+  font-size: 1.1rem;
+  text-align: start;
+}
+
+#menu {
+  min-height: 100vh;
+}
+
+#container_menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+#container_slides {
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 40%;
+}
+
+#container_images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+}
+
+.image-slides {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.1);
+}
+
+.overlay-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 111;
+  border-radius: 10px;
+  transition: 0.3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay:hover {
+  background-color: rgba(61, 61, 61, 0.6039215686);
+}
+
+.overlay-txt {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s ease-in;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 70px;
+  font-size: 1.3rem;
+}
+
+.overlay-txt:hover {
+  opacity: 1;
+}
+
+.on {
+  opacity: 1;
+}
+
+#voltar_btn, #avancar_btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#voltar_btn img, #avancar_btn img {
+  width: 100%;
+  height: 100%;
+}
+
+#voltar_btn {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 930px) {
+  #about {
+    margin-bottom: 400px;
+  }
+  #about #about_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  #headline {
+    text-align: center;
+    width: 90%;
+    gap: 20px;
+  }
+  #headline_img {
+    width: 100%;
+  }
+  #container_menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .titles {
+    text-align: center;
+    width: 100%;
+  }
+  #container_slides {
+    width: 100%;
+  }
+  #dishes {
+    flex-wrap: wrap;
+  }
+  .dish {
+    width: calc(50% - 24px);
+  }
+}
+@media screen and (max-width: 650px) {
+  #content {
+    margin: 0 0 100px 6%;
+  }
+  #home_title {
+    font-size: 25px;
+  }
+  #content_default {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  #container_slides button {
+    width: 30px;
+    height: 20px;
+  }
+  .overlay-txt {
+    padding: 0;
+    align-items: center;
+  }
+  .dish {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .image-slides {
+    height: 200px;
+    width: 100%;
+  }
+}
+.swiper {
+  width: 600px;
+  height: 300px;
 }/*# sourceMappingURL=style.css.map */
