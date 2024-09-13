@@ -371,7 +371,7 @@ button .linha{
 // RESPOSIVIDADE
 @media screen and (max-width: 930px) {
     #about{
-        margin-bottom: 400px;
+        margin-bottom: 50px;
     }
     #about #about_container{
         flex-direction: column;
@@ -428,6 +428,9 @@ button .linha{
     }
     .dish{
         width: 100%;
+    }
+    .descriptions-dishes{
+        text-align: center;
     }
 }
 
