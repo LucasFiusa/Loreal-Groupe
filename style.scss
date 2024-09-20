@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+i{
+    color: #3d3d3d;
+}
 body{
     font-family: "Poppins", system-ui;
     color: #3d3d3d;
@@ -14,6 +16,7 @@ body{
 
 a{
     text-decoration: none;
+    color: #3d3d3d;
 }
 
 .interface{
@@ -32,6 +35,8 @@ a{
     justify-content: center;
     align-items: center;
     transition: .3s ease-in;
+    font-weight: 500;
+    color: #3d3d3d;
 }
 
 .btn-default:hover{
@@ -185,7 +190,7 @@ button .linha{
 
 // SOBRE
 #about{
-    min-height: 100vh;
+    margin-bottom: 200px;
 }
 
 #about_container{
@@ -211,7 +216,7 @@ button .linha{
 
 // TRAJETÓRIA
 #process{
-    min-height: 100vh;
+    margin-bottom: 200px;
 }
 
 #process .interface{
@@ -265,7 +270,7 @@ button .linha{
 
 // PRODUTOS
 #menu{
-    min-height: 100vh;
+    margin-bottom: 200px;
 }
 
 #container_menu{
@@ -366,10 +371,109 @@ button .linha{
 
 
 // FOOTER
+#footer{
+    width: 100%;
 
+    .interface{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+#flex_footer{
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid #3d3d3d49;
+    border-top: 1px solid #3d3d3d49;
+    padding: 15px;
+} 
+
+#container_logos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo{
+    width: 10%;
+}
+
+#content_footer{
+    margin-bottom: 40px;
+}
+
+#redirection{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.redirections a{
+    transition: .3s ease-in;
+}
+
+.redirections a:hover{
+    color: #3d3d3da4;
+}
+
+#content_social{
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+#autoria{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.name{
+    font-size: 0.9rem;
+    color: #3d3d3da4;
+    transition: .3s ease-in;
+}
+
+.name:hover{
+    color: #3d3d3d;
+}
+
+#social_midia{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-midia-btn{
+    background-color: #dbd9d6;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.1);
+    transition: .3s ease-in;
+
+    a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.social-midia-btn:hover{
+    background-color: #3d3d3d;
+
+    i{
+        color: #dbd9d6;
+    }
+}
 
 // RESPOSIVIDADE
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1000px) {
     #about{
         margin-bottom: 50px;
     }
@@ -404,7 +508,12 @@ button .linha{
     .dish{
         width: calc(50% - 24px);
     }
-    
+    .logo{
+        width: 20%;
+    }
+    .social-midia-btn{
+        
+    }
 }
 
 @media screen and (max-width: 650px){
