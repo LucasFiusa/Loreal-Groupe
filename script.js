@@ -1,3 +1,41 @@
+// MENU LATERAL
+let menu = document.getElementById('abrir_menu_lateral_icon');
+let menuLateral = document.getElementById('menu_lateral');
+let overlay = document.getElementById('overlay_menu_lateral');
+
+menu.addEventListener('click', () => {
+    menuLateral.classList.toggle('abrir-menu');
+    document.body.classList.toggle('no-scroll', menuLateral.classList.contains('abrir-menu'));
+});
+
+overlay.addEventListener('click', () => {
+    closeMenu();
+});
+
+
+function closeMenu() {
+    menuLateral.classList.remove('abrir-menu');
+    document.body.classList.remove('no-scroll');
+    menu.classList.remove('ativar');
+}
+
+const navbarLinks = document.querySelectorAll('#navbar_list li a');
+navbarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId); 
+
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+
+        closeMenu();
+    });
+});
+
+// FIM MENU LATERAL
+
+
+
 // SCROLL
 window.addEventListener("scroll", function(){
     let header = document.querySelector('#header')
@@ -30,11 +68,6 @@ function updateImage() {
 window.addEventListener('scroll', updateImage);
 header.addEventListener('mouseover', updateImage);
 header.addEventListener('mouseout', updateImage)
-
-function animar(){
-    const menu = document.getElementById('abrir_menu_lateral_icon')
-    menu.classList.toggle('ativar')
-}
 // FIM HOVER
 
 
@@ -47,6 +80,8 @@ const btnNext = document.getElementById('avancar_btn');
 let currentSlide = 0;
 
 // FIM CARROSSEL
+
+
 
 // const swiper = new Swiper('.swiper' , {
 

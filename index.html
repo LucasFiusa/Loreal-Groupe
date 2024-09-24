@@ -11,7 +11,7 @@
 <body>
     <header id="header">
         <div id="container">
-            <button id="abrir_menu_lateral_icon" onclick="animar()">
+            <button id="abrir_menu_lateral_icon" class="btn-menu" onclick="animar()">
                 <div class="linha"></div>
                 <div class="linha"></div>
                 <div class="linha"></div>
@@ -20,15 +20,21 @@
             <div id="menu_lateral">
                 <nav id="navbar">
                     <ul id="navbar_list">
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#process">Trajetória</a></li>
-                        <li><a href="#menu">Produtos</a></li>
+                        <li><a href="#home">Início <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="#about">Sobre <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="#process">Trajetória <i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="#menu">Produtos <i class="fa-solid fa-chevron-right"></i></a></li>
                     </ul>
 
                     <a href="#" class="btn-default">Fale Conosco</a>
                 </nav>
             </div> <!--menu_lateral-->
+
+            <div id="overlay_menu_lateral">
+                <!--  -->
+                <!--  -->
+                <!--  -->
+            </div>
 
             <div id="logo_img">
                 <a href="index.html">
@@ -277,5 +283,12 @@
     </footer>
     
     <script src="script.js"></script>
+    
+    <script>
+
+        function animar(){
+            menu.classList.toggle('ativar')
+        }
+    </script>
 </body>
 </html>

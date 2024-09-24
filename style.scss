@@ -6,12 +6,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 i{
     color: #3d3d3d;
 }
+
 body{
     font-family: "Poppins", system-ui;
     color: #3d3d3d;
+}
+
+body.no-scroll{
+    overflow: hidden;
 }
 
 a{
@@ -106,19 +112,20 @@ header button{
     background-color: transparent;
     cursor: pointer;
     border: none;
+    z-index: 9999999;
 }
 
-button.ativar .linha:nth-child(1){
+header button.ativar .linha:nth-child(1){
     transform: translateY(7px) rotate(-45deg);
 }
-button.ativar .linha:nth-child(2){
+header button.ativar .linha:nth-child(2){
     width: 0;
 }
-button.ativar .linha:nth-child(3){
+header button.ativar .linha:nth-child(3){
     transform: translateY(-8px) rotate(45deg);
 }
 
-button .linha{
+header button .linha{
     width: 20px;
     height: 3px;
     background-color: #fff;
@@ -130,7 +137,25 @@ button .linha{
 }
 
 #menu_lateral{
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 100vh;
+    background-color: white;
+    width: 0%;
+    overflow: hidden;
+
+    transition: .4s;
+    // display: none;
+}
+
+#menu_lateral.abrir-menu{
+    width: 30vw;
+}
+
+#menu_lateral.abrir-menu ~ #overlay_menu_lateral{
+    display: block;
 }
 
 #logo_img{
@@ -145,6 +170,66 @@ button .linha{
     }
 }
 
+#navbar{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 4% 30px 4%;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#navbar_list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+}
+
+#navbar_list li{
+    border-bottom: #3d3d3d2a solid 1px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 4%;
+    width: 100%;
+}
+
+#navbar_list li a{
+    transition: .3s ease-in;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar_list li a:hover, #navbar_list li a i:hover{
+    color: #3d3d3d96;
+}
+
+
+#overlay_menu_lateral{
+    background-color: #000000b6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 8888;
+    display: none;
+}
+
+#navbar .btn-default{
+    background-color: #3d3d3d;
+    color: #fff;
+    width: 50%;
+    margin: 0 auto;
+    transition: .3s ease-in;
+}
+
+#navbar .btn-default:hover{
+    background-color: #3d3d3d73;
+}
 // INICIO
 #home{
     max-width: 100%;
@@ -523,6 +608,9 @@ button .linha{
     }
     #social_midia{
         width: 100%;
+    }
+    #menu_lateral.abrir-menu{
+        width: 100vw;
     }
 }
 
